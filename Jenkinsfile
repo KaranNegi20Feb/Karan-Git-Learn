@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/selenium-tests.git'
+                git 'https://github.com/KaranNegi20Feb/Karan-Git-Learn'
             }
         }
 
@@ -39,7 +39,7 @@ pipeline {
             emailext(
                 subject: "Selenium Test Report - ${currentBuild.fullDisplayName}",
                 body: "Test Report attached.\n\nBuild URL: ${env.BUILD_URL}",
-                to: 'your-email@example.com',
+                to: 'karanegi076@example.com',
                 attachLog: true
             )
         }
